@@ -1,0 +1,50 @@
+
+h1 {
+	color: #E5E5E5;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 100 px;
+	font-size: 300%; }
+	
+body {
+	font-family: "Comic Sans MS", Helvetica, Times;
+	background-color: #4D4D4D;
+	text-align: center;}
+
+[type="text"] {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 6px 12px 6px 12px;
+	border: 1px solid #000000;
+	background-color: #E5E5E5;
+	width: 300px;
+	} 
+[type="email"] {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 6px 12px 6px 12px;
+	border: 1 px solid #000000;
+	background-color: #E5E5E5;
+	width: 300px;
+	}
+
+	
+[type="submit"] {
+	margin-top: 10px;
+	padding: 6px 12px;
+	border: 1px solid #000000;
+	color: #BFBFBF;
+	text-align: center;
+	background-color: #1A1A1A;
+	}
+	
+
+input#submit: hover {
+	background-color: #000000;}
+input#submit: active {
+	background-color: #800080;}
+input.text: {
+	color: #555555;}
+input.text:focus {
+	color: #665544;}
+	
