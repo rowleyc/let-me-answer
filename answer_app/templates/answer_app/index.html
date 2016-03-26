@@ -1,20 +1,23 @@
-<html>
-{% load staticfiles %}
+{% extends "answer_app/base.html" %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'answer_app/style.css' %}" />
 {% block static-files %}{% endblock static-files %}
 
-	<head>
-		<title> Let me answer that...</title>
+{% block title %}Let me answer that...{% endblock title %}
 		
-	</head>
-		
-	<body>
-		<h1> Let me answer that for you!</h1>
+{% block content %}
+	<h1> Let me answer that for you!</h1>
 		
 		<p> 
-			<form action="SubmissionReceipt.html">
-			<h3> Step 1: Ask a question. </h3>
+			<form action="{% url 'answer_app:index' %}" method='POST'>
+				{% csrf_token %}
+				<p>test</p>
+				{{ form.question }}
+				<p>other test</p>
+				{{ form.user_email}}						
+			<input type="submit" name="submitButton" value="submit"  />  
+		</p>
+{% endblock content %}
+	</form>	<h3> Step 1: Ask a question. </h3>
 			<br />
 			<input type="text" name="question" placeholder="Go ahead...Ask me anything." /> 
 			<br />
@@ -24,9 +27,3 @@
 			<br />
 			<h3>Step 3: Hit submit to get an answer from REAL PEOPLE! </h3>
 			<br />
-			<input type="submit" name="submitButton" value="submit"  />  
-			</form>
-		</p>
-		
-	</body>
-</html>
